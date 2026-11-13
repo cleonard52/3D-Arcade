@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3D Arcade Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-dot"></span>
+      <h1>3D ARCADE HUB</h1>
+    </div>
+    <nav class="game-tabs" aria-label="Game Selector">
+      <button class="tab-btn active" data-game="tunnel">Neon Tunnel 3D</button>
+      <button class="tab-btn" data-game="stack">Voxel Stack 3D</button>
+      <button class="tab-btn" data-game="asteroids">Starfield Asteroids 3D</button>
+      <button class="tab-btn" data-game="racer">Skyline Racer 3D</button>
+    </nav>
+    <div class="hud-bar">
+      <div class="hud-pill"><span id="label-stat1">SCORE</span><strong id="val-stat1">0</strong></div>
+      <div class="hud-pill"><span id="label-stat2">SPEED</span><strong id="val-stat2">1.0x</strong></div>
+      <div class="hud-pill"><span id="label-stat3">BEST</span><strong id="val-stat3">0</strong></div>
+    </div>
+  </header>
+
+  <main class="stage">
+    <canvas id="gameCanvas"></canvas>
+    <div id="reticle" class="reticle hidden"></div>
+    <div id="toast" class="toast hidden"></div>
+
+    <div id="overlay" class="overlay">
+      <div class="modal">
+        <span id="modal-tag" class="tag">3D ARCADE COLLECTION</span>
+        <h2 id="modal-title">Neon Tunnel 3D</h2>
+        <p id="modal-desc">Dodge wireframe blocks and collect glowing energy orbs inside an endless 3D tunnel.</p>
+        <p id="modal-controls" class="controls-hint">Controls: Left / Right Arrows or A / D (or Drag/Tap)</p>
+        <div id="final-score-box" class="final-score hidden">
+          <span>FINAL SCORE</span>
+          <strong id="final-score-val">0</strong>
+        </div>
+        <button id="play-btn" class="play-btn">LAUNCH GAME</button>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bottom-bar">
+    <div class="game-cards">
+      <button class="mini-card active" data-game="tunnel">
+        <strong>01. Neon Tunnel 3D</strong>
+        <span>Endless 3D corridor runner</span>
+      </button>
+      <button class="mini-card" data-game="stack">
+        <strong>02. Voxel Stack 3D</strong>
+        <span>Isometric precision tower builder</span>
+      </button>
+      <button class="mini-card" data-game="asteroids">
+        <strong>03. Starfield Asteroids 3D</strong>
+        <span>First-person space laser shooter</span>
+      </button>
+      <button class="mini-card" data-game="racer">
+        <strong>04. Skyline Racer 3D</strong>
+        <span>Synthwave 3D highway racer</span>
+      </button>
+    </div>
+  </footer>
+
+  <script src="arcade.js"></script>
+</body>
+</html>
